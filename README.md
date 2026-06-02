@@ -1,8 +1,8 @@
 # Wireshark Practice Labs
 
 ## Objective
-Document my practice using Wireshark installed on my host computer.  
-Each subfolder contains simulated issues for common protocols (TCP, DNS, HTTP, TLS, ARP).
+I’m sharing my experience using Wireshark installed on my host computer.  
+Each subfolder contains examples of simulated issues for common protocols (TCP, DNS, HTTP, TLS, ARP) that I practiced and documented.
 
 ## 📂 Protocol Labs
 - [TCP Issues](./TCP/README.md)
@@ -12,4 +12,5 @@ Each subfolder contains simulated issues for common protocols (TCP, DNS, HTTP, T
 - [ARP Issues](./ARP/README.md)
 
 ## Reflection
-This repo demonstrates how to capture, filter, and analyze packets to troubleshoot common networking problems.  
+This repo is meant to share what I learned while experimenting with packet captures and troubleshooting.  
+By walking through these scenarios, I hope others can also pick up practical tips for analyzing and solving common networking problems.
