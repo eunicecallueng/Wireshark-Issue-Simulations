@@ -5,7 +5,7 @@ I’m sharing my experience using Wireshark installed on my host computer.
 Each subfolder contains examples of simulated issues for common protocols (TCP, DNS, HTTP, TLS, ARP) that I practiced and documented.
 
 ## 📂 Protocol Labs
-- [TCP Issues](./TCP/README.md)
+- [01-packet-loss](./01-packet-loss/README.md)
 - [DNS Issues](./DNS/README.md)
 - [HTTP Issues](./HTTP/README.md)
 - [TLS Issues](./TLS/README.md)
