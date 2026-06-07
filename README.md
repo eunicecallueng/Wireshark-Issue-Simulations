@@ -7,7 +7,7 @@ Each subfolder contains examples of simulated issues for common protocols (TCP, 
 ## 📂 Protocol Labs
 - [01.packet-loss](./01-packet-loss/README.md)
 - [02.DNS-resolution-failure](./02.DNS-resolution-failure/README.md)
-- [HTTP Issues](./HTTP/README.md)
+- [03.TCP-connection-reset](./03.TCP-connection-reset/README.md)
 - [TLS Issues](./TLS/README.md)
 - [ARP Issues](./ARP/README.md)
 
