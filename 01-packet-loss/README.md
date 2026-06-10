@@ -1,24 +1,17 @@
 # Network Latency and Packet Loss Simulation
 
-This project demonstrates how network impairments—specifically latency and packet loss—affect TCP traffic, resulting in duplicate acknowledgments and packet retransmissions.
+I wanted to see how a degraded network connection (like bad Wi-Fi) looks at the packet level. To do this, I used a tool called **Clumsy** to deliberately inject lag and drop packets into my connection while targeting a specific IP address.
 
-## Simulation Setup
+## Simulation Steps
 
-To replicate the network issue, I used the following tools and configurations:
-
-1. **Network Emulator (Clumsy):**
-   * Turned on Lag to give the network some intentional delay.
-   * Turned on Drop to simulate those annoying packet losses.
-     
-2. **Traffic Generation:**
-   * Ran a continuous ping in the Command Prompt to generate constant network traffic:
-     ```cmd
-     ping 1.1.1.1 -t
-     ```
-3. **Packet Capture:**
-   * Used Wireshark to capture the traffic and saved the results in a `.pcapng` file.
+I opened **Clumsy** as an administrator and set the filter to `ip.DstAddr == 1.1.1.1` to ensure I only messed with my traffic going to Cloudflare.
+2. I turned on **Lag** and set it to `500ms`, and enabled **Drop** with a `20%` chance. 
+3. I started a live capture on **Wireshark** using the display filter `ip.addr == 1.1.1.1`.
+4. From my terminal, I ran `ping 1.1.1.1 -t` to generate test traffic. I immediately saw some pings taking half a second while others timed out completely.
 
 ![Packet Loss Simulation](./packet_loss.png)
+
+5. After the pings finished, I stopped the capture and turned off Clumsy.
 
 ---
 
