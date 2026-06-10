@@ -4,9 +4,12 @@ I wanted to see how a degraded network connection (like bad Wi-Fi) looks at the 
 
 ## Simulation Steps
 
-I opened **Clumsy** as an administrator and set the filter to `ip.DstAddr == 1.1.1.1` to ensure I only messed with my traffic going to Cloudflare.
-2. I turned on **Lag** and set it to `500ms`, and enabled **Drop** with a `20%` chance. 
+1. I opened **Clumsy** as an administrator and set the filter to `ip.DstAddr == 1.1.1.1` to ensure I only messed with my traffic going to Cloudflare.
+  
+2. I turned on **Lag** and set it to `500ms`, and enabled **Drop** with a `20%` chance.
+   
 3. I started a live capture on **Wireshark** using the display filter `ip.addr == 1.1.1.1`.
+   
 4. From my terminal, I ran `ping 1.1.1.1 -t` to generate test traffic. I immediately saw some pings taking half a second while others timed out completely.
 
 ![Packet Loss Simulation](./packet_loss.png)
