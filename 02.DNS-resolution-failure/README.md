@@ -32,4 +32,4 @@ To isolate the DNS traffic and analyze the failure pattern, I applied this displ
 
 * **Retries and Timeouts:** The operating system attempted to resend the exact same DNS query multiple times at increasing intervals before finally giving up and throwing a timeout error to the user interface.
 
-    ![DNS retransmission](./dns_retransmission.png.png)
+    ![DNS retransmission](./dns_retransmission.png)
