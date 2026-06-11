@@ -4,7 +4,7 @@ I wanted to see how a degraded network connection (like bad Wi-Fi) looks at the 
 
 ## Simulation Steps
 
-1. I opened **Clumsy** as an administrator and set the filter to `ip.DstAddr == 1.1.1.1` to ensure I only messed with my traffic going to Cloudflare.
+1. I opened **Clumsy** as an administrator and set the filter to `outboound and ip.DstAddr == 8.8.8.8` to ensure I only messed with my traffic going tp 8.8.8.8
   
 2. I turned on **Lag** and set it to `500ms`, and enabled **Drop** with a `20%` chance.
    
