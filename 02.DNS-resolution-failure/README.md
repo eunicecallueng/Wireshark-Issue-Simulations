@@ -17,7 +17,7 @@ In this scenario, I simulated a DNS failure, which is a common network issue whe
 2. I executed `ipconfig /flushdns` in the command prompt to clear the local resolver cache and force the OS to request fresh resolution.
 3. I started a **Wireshark** capture and attempted to query a domain using `nslookup github.com`.
 
-      ![Powershell](./flush_dns.png)
+      ![Powershell](./flushdns.png)
   
 4. After capturing the failing packets, I reverted my network adapter back to Automatic (DHCP).
 
@@ -30,6 +30,7 @@ To isolate the DNS traffic and analyze the failure pattern, I applied this displ
 
     ![DNS response missing](./dns_response_missing.png)
 
-* **Retries and Timeouts:** The operating system attempted to resend the exact same DNS query multiple times at increasing intervals before finally giving up and throwing a timeout error to the user interface.
+* **Background Process Activity:** I noticed that various background applications (like **Skype** and other system services) were constantly attempting to reach their servers. Since my fake DNS server (`10.0.0.99`) was not responding, these apps spammed the network with DNS queries.
+* **Retransmissions:** Because no DNS reply was received, the operating system and the background apps performed multiple **retransmissions**. You can see the same query ID being sent repeatedly at increasing intervals as the applications tried to recover from the lack of a response.
 
     ![DNS retransmission](./dns_retransmission.png)
