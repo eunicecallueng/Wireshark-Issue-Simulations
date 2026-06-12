@@ -24,11 +24,11 @@ To separate these behaviors, I used specific display filters:
 
 What I observed in the PCAP:
 
-Silent Drops (google.com:81): Google's edge completely ignored my SYN packets. This resulted in a flood of bright red [TCP Retransmission] packets as my machine kept desperately trying to establish a connection with no response.
+* Silent Drops (google.com:81): Google's edge completely ignored my SYN packets. This resulted in a flood of bright red [TCP Retransmission] packets as my machine kept desperately trying to establish a connection with no response.
 
   ![TCP Retransmission](./silent-drops.png)
 
-Active TCP Reset (13.107.43.254): Unlike the silent drop on port 81, a background connection to a Microsoft service IP (13.107.43.254) was actively rejected. The remote host immediately answered with an [RST, ACK] flag, visibly cutting off the connection and forcing an immediate socket closure.
+* Active TCP Reset (13.107.43.254): Unlike the silent drop on port 81, a background connection to a Microsoft service IP (13.107.43.254) was actively rejected. The remote host immediately answered with an [RST, ACK] flag, visibly cutting off the connection and forcing an immediate socket closure.
 
   ![TCP_Connection_Reset](./connection_reset.png)
 
