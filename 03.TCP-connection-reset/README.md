@@ -1,4 +1,4 @@
-# 3. Simulating TCP Connection Reset (RST) vs. Silent Drops
+# TCP Connection Reset (RST)
 
 ## Scenario Overview
 In this scenario, I analyzed how endpoints handle unavailable ports. I observed two distinct behaviors: a **Silent Drop** (where the server ignores the request, forcing retransmissions) and an active **TCP Reset** (where a remote firewall or server explicitly terminates the connection attempt).
