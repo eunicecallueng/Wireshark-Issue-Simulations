@@ -9,7 +9,7 @@ In this scenario, I analyzed how endpoints handle unavailable ports. I observed 
 1. I initiated a Wireshark capture on my active network interface.
 2. I attempted to force a TCP connection to a public destination on an unmonitored port (`81`) using the command prompt:
    ```PowerShell
-    curl [http://google.com:81](http://google.com:81)
+    curl http://google.com:81
 3. I also captured background traffic from active applications interacting with external cloud services (such as Microsoft/Live endpoints).
 
 ---
