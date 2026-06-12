@@ -1,7 +1,9 @@
-## 2. Simulating DNS Resolution Failure
+# Simulating DNS Resolution Failure
 
 ### Scenario Overview
 In this scenario, I simulated a DNS failure, which is a common network issue where client machines cannot resolve domain names into IP addresses.
+
+---
 
 ### Simulation Steps
 1. I manually broke the DNS configuration on Windows 11 using the following steps:
@@ -20,6 +22,8 @@ In this scenario, I simulated a DNS failure, which is a common network issue whe
       ![Powershell](./flushdns.png)
   
 4. After capturing the failing packets, I reverted my network adapter back to Automatic (DHCP).
+
+---
 
 ### Wireshark Analysis & Filters
 To isolate the DNS traffic and analyze the failure pattern, I applied this display filter:
