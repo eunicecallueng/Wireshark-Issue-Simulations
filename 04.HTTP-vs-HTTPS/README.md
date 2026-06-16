@@ -1,4 +1,4 @@
-## 5. HTTP vs. HTTPS (Clear Text Data Leak)
+HTTP vs. HTTPS (Clear Text Data Leak)
 
 ### Scenario Overview
 For this last scenario, I wanted to see first-hand why everyone keeps insisting on using HTTPS everywhere. I simulated a mock login request over a regular HTTP connection to see if I could "sniff" my own password using Wireshark, and then compared it to an encrypted HTTPS connection. The results were honestly eye-opening!
