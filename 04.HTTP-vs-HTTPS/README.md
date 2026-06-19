@@ -10,8 +10,8 @@ For this last scenario, I wanted to see first-hand why everyone keeps insisting 
 2. Since most of the web is already encrypted, I used an API testing tool called **httpbun.com** to send a mock login payload over a plain, unencrypted HTTP link using `curl`:
    ```cmd
    curl -X POST -d "user=TESTADMIN&pass=TESTPASSWORD" http://httpbun.com/post
-3. To see the difference, I ran the exact same command right after, but changed the URL to the secure version: https://httpbun.com/post.
-4.I stopped the capture to check out what Wireshark recorded.
+3. To see the difference, I ran the exact same command right after, but changed the URL to the secure version: https://httpbun.com/post
+4. I stopped the capture to check out what Wireshark recorded.
 
 ---
 
