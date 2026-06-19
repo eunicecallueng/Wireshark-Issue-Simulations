@@ -28,7 +28,7 @@ To track down my credentials, I filtered out the packet noise using:
 
 ![HTTP TCP Stream](./http_tpc_stream.png)
 
-Right then and there, you can clearly see the unencrypted username and password (`user=PinoyAdmin&pass=Bagsik1234`) in plain text! It really opened my eyes to how easy it is for someone to harvest data if you're browsing on a public Wi-Fi network without encryption.
+Right then and there, you can clearly see the **unencrypted username and password** (`user=TESTADMIN&pass=TESTPASSWORD`) in plain text! It really opened my eyes to how easy it is for someone to harvest data if you're browsing on a public Wi-Fi network without encryption.
 
 ![Unencrypted HTTP logins](./unencxrypted_pass.png)
 
