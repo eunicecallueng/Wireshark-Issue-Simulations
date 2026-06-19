@@ -38,7 +38,7 @@ Right then and there, you can clearly see the **unencrypted username and passwor
 
 * **HTTPS completely saves the day:** For the HTTPS side, I used the filter `tls.handshake.extensions_server_name == "httpbun.com"`, because it isolates the initial handshake where my computer explicitly asks to talk to `httpbun.com`. Alternatively, using `tls.record.content_type == 23` if I wanted to skip all the setup packets (like Client Hello and Server Hello) and see only the packets carrying the actual encrypted data/payload.
 
-![HTTPS TCP Stream](./https_tpc_stream.png)
+![HTTPS TCP Stream](./https_tcp_stream.png)
 
 No matter which filter I used to find it, following that secure stream gave me nothing but unreadable, garbled characters—proving the password remained completely secure during transit.
 
